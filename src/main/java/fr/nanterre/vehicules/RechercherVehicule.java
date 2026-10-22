@@ -3,18 +3,14 @@ package fr.nanterre.vehicules;
 import java.util.List;
 
 public class RechercherVehicule {
-    // Renvoie le véhicule trouvé, ou null s'il n'existe pas
+    // TODO: Écrire le code manuellement
     public static Vehicule rechercher(List<Vehicule> parc, String immatriculation) {
-        for (Vehicule v : parc) {
-            if (v.getImmatriculation().equals(immatriculation)) {
-                return v;
-            }
-        }
+        // À toi d'implémenter la recherche du véhicule
         return null;
     }
 
-    // Compte les véhicules d'une marque
     public static long compterParMarque(List<Vehicule> parc, String marque) {
-        return parc.stream().filter(v -> v.getMarque().equals(marque)).count();
+        // À toi d'implémenter le décompte par marque
+        return 0;
     }
 }
