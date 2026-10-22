@@ -1,5 +1,7 @@
 # Classes compilées par javac
 out/
+
 # Fichiers des éditeurs
 .idea/
 .vscode/
+*.env
