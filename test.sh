@@ -1,6 +1,11 @@
 #!/bin/sh
 # Compile le code et les tests, puis lance les tests JUnit
-JUNIT=/usr/share/java/junit-platform-console-standalone.jar
+if [ -f "/usr/share/java/junit-platform-console-standalone.jar" ]; then
+    JUNIT="/usr/share/java/junit-platform-console-standalone.jar"
+else
+    JUNIT="$HOME/.local/share/java/junit-platform-console-standalone.jar"
+fi
+
 rm -rf out
 javac -d out -cp "$JUNIT" $(find src -name "*.java") || exit 1
 java -jar "$JUNIT" execute --disable-banner --disable-ansi-colors \
